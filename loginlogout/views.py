@@ -28,7 +28,7 @@ def SignUp(request):
             signup_url = reverse('signup') 
             return render(request, 'signUp.html', {'error_message': error_message, 'signup_url': signup_url})
 
-    return render(request, 'signup.html')
+    return render(request, 'signUp.html')
 
 
 
@@ -44,11 +44,13 @@ def Login(request):
             return redirect('home')
         else:
             error_message = "Invalid username or password."
-            return render(request, 'main.html', {'error_message': error_message})
+            return render(request, 'signIn.html', {'error_message': error_message})
 
-    return render(request, 'main.html')
+    return render(request, 'signIn.html')
 
 
 
 def forgot_password(request):
-    return render(request,'forgetPass.html')
+      return render(request, 'forgetPass.html')
+
+ 

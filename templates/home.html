@@ -1,14 +1,54 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>DJANGO Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+
 </head>
 <body>
-    
-    <h1>This is home page.<br>Design Left</h1>
+  
+<section>
+  <article>
+    <ul class="panels">
+      <li class="panel">
+        <a href="#">
+          <span>
+            Animals            
+          </span>
+        </a>
+        <img src="{% static 'images/wolf.jpg' %}" />
+      </li>
+      <li class="panel">
+        <a href="#">
+          <span>
+            History            
+          </span>
+        </a>
+        <img src="{% static 'images/hitler.jpg' %}" />
+      </li>
+      <li class="panel">
+        <a href="#">
+          <span>
+            Science           
+          </span>
+        </a>
+        <img src="{% static 'images/science.jpg' %}" />
+      </li>
+      <li class="panel">
+        <a href="#">
+          <span>
+            Travel            
+          </span>
+        </a>
+        <img src="{% static 'images/eiffel.jpg' %}" />
+      </li>
+    </ul>
+  </article>
+</section>
 
 </body>
 </html>
